@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="566,2402" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="713.6,3230.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -33,6 +33,9 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Security</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -68,40 +71,42 @@
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="552,2337" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap:VirtualizedContainerService.HintSize="592,3165.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Tripadvisor: Over a billion reviews &amp; contributions for Hotels, Attractions, Res" sap:VirtualizedContainerService.HintSize="510,2245" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="03be9af5-f847-4395-a97a-105f76fba1b3" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Tripadvisor: Over a billion reviews &amp; contributions for Hotels, Attractions, Res" sap:VirtualizedContainerService.HintSize="550.4,2262.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="03be9af5-f847-4395-a97a-105f76fba1b3" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,2029" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="475.2,2045.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-            <uix:NClick ClickType="Single" DisplayName="Click 'Restaurants'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="03be9af5-f847-4395-a97a-105f76fba1b3" Version="V1">
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uix:NClick ClickType="Single" DisplayName="Click 'Restaurants'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="03be9af5-f847-4395-a97a-105f76fba1b3" Version="V1">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.tripadvisor.com/" DesignTimeRectangle="688, 376, 181, 68" ElementType="Text" FriendlyName="'Restaurants'" FullSelectorArgument="&lt;webctrl aaname='Restaurants' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Restaurants' tag='A' type='' class='XUWut Ra _S z _Z w o v _Y Wh k _T wSSLS' check:innerText='Restaurants' /&gt;" Guid="8ec6b00d-9bd5-4046-bcd7-ae8d6ca0afa7" ImageBase64="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" InformativeScreenshot="e75cbe82043f5ea8f41802b2836b823e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tripadvisor: Over a billion reviews &amp;amp; contributions for Hotels, Attractions, Restaurants, and more' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="03be9af5-f847-4395-a97a-105f76fba1b3" Text="New York" Version="V1">
+            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="03be9af5-f847-4395-a97a-105f76fba1b3" Text="New York" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.tripadvisor.com/" DesignTimeRectangle="313, 208, 740, 64" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;input' tag='INPUT' type='search' /&gt;" FuzzySelectorArgument="&lt;webctrl class='qjfqs _G B- z _J Cj R0' tag='INPUT' type='search' aaname='Search' /&gt;" Guid="8ad09539-84dc-42ff-9ead-ff3673a5c2c8" ImageBase64="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" InformativeScreenshot="29f4649adb41f36a02c95cb5cd6eec88.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Tripadvisor: Over a billion reviews &amp;amp; contributions for Hotels, Attractions, Restaurants, and more' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateHover="{x:Null}" DisplayName="Hover 'A  /Restaurants-g30196-...'" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Hover_1">
+            <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateHover="{x:Null}" DisplayName="Hover 'A  /Restaurants-g30196-...'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_1">
               <ui:Hover.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -123,8 +128,8 @@
                 </ui:Target>
               </ui:Hover.Target>
             </ui:Hover>
-            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
-            <ui:ClickText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" FormattedText="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Text 'A  /Restaurants-g30196-...'" sap:VirtualizedContainerService.HintSize="434,134" sap2010:WorkflowViewState.IdRef="ClickText_1" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="New York">
+            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
+            <ui:ClickText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" FormattedText="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Text 'A  /Restaurants-g30196-...'" sap:VirtualizedContainerService.HintSize="433.6,135.2" sap2010:WorkflowViewState.IdRef="ClickText_1" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" Text="New York">
               <ui:ClickText.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -146,8 +151,8 @@
                 </ui:Target>
               </ui:ClickText.Target>
             </ui:ClickText>
-            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_4" />
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  /Restaurants-g30196-...'" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_4" />
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  /Restaurants-g30196-...'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -169,8 +174,8 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_5" />
-            <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateHover="{x:Null}" DisplayName="Hover 'A '" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Hover_2">
+            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_5" />
+            <ui:Hover DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateHover="{x:Null}" DisplayName="Hover 'A '" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Hover_2">
               <ui:Hover.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -192,7 +197,7 @@
                 </ui:Target>
               </ui:Hover.Target>
             </ui:Hover>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -214,14 +219,14 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_6" />
-            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" ContinueOnError="True" DisplayName="Attach Window 'chrome.exe TRUDY'S'" sap:VirtualizedContainerService.HintSize="434,229" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="972790f49cd8e46409cefdcd4ce78043" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='TRUDY&amp;apos;S DEL MAR, Austin - South Austin - Menu, Prices &amp;amp; Restaura*' /&gt;">
+            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_6" />
+            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" ContinueOnError="True" DisplayName="Attach Window 'chrome.exe TRUDY'S'" sap:VirtualizedContainerService.HintSize="433.6,232" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="972790f49cd8e46409cefdcd4ce78043" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='TRUDY&amp;apos;S DEL MAR, Austin - South Austin - Menu, Prices &amp;amp; Restaura*' /&gt;">
               <ui:WindowScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,84.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -231,7 +236,7 @@
                 </ActivityAction>
               </ui:WindowScope.Body>
             </ui:WindowScope>
-            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_7" />
+            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_7" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -239,5 +244,57 @@
         <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="a2765e72429c9a3df045af1bf45e2963.png" Selector="&lt;html app='chrome.exe' title='Tripadvisor: Over a billion reviews &amp;amp; contributions for Hotels, Attractions, Restaurants, and more' /&gt;" Url="https://www.tripadvisor.com/" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
+    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="550.4,770.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'THE10BEST Page'" sap:VirtualizedContainerService.HintSize="508.8,677.6" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="da3b9cb9623e666102082d6e565a5a11" Selector="&lt;html app='chrome.exe' title='THE 10 BEST Restaurants in New York City - Updated August 2022 - Tripadvisor' /&gt;">
+        <ui:BrowserScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="475.2,530.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Structured Data 'DIV'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='RestaurantName' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100" SimulateClick="True">
+                <ui:ExtractData.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="57965ed6-41ac-47a2-855f-d7b209710863" InformativeScreenshot="148d1ed6eb2ee461d05b56fed980c32f" Selector="&lt;webctrl parentid='component_2' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                  </ui:Target>
+                </ui:ExtractData.Target>
+              </ui:ExtractData>
+              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="433.6,290.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="RestaurantNames.xlsx">
+                <ui:ExcelApplicationScope.Body>
+                  <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,180.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:ExcelWriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[ExtractDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Sheet1" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ExcelApplicationScope.Body>
+              </ui:ExcelApplicationScope>
+            </Sequence>
+          </ActivityAction>
+        </ui:BrowserScope.Body>
+      </ui:BrowserScope>
+    </Sequence>
   </Sequence>
 </Activity>
